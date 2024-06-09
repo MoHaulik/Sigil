@@ -13,7 +13,7 @@ function generateSigil() {
 }
 
 function createSigil(goal) {
-    const sanitizedGoal = goal.replace(/[aeiou\s]/gi, '');
+    const sanitizedGoal = goal.replace(/[aeiou\s]/gi, '').toUpperCase();
     const uniqueLetters = [...new Set(sanitizedGoal)];
     return uniqueLetters.join('');
 }
