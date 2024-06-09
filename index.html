@@ -1,14 +1,45 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flimmer og Stoej</title>
+    <title>Sigil Creation and Meditation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <canvas id="flimmerCanvas"></canvas>
-    <audio id="audioPlayer" loop></audio>
-    <script src="scripts.js"></script>
+    <div id="landing-page">
+        <h1>Welcome to Sigil Creation</h1>
+        <p>
+            This website helps you create a powerful sigil, a symbolic representation of your goal, using the principles of Chaos Magic. 
+            You will enter your goal, and our algorithm will generate a unique sigil for you. 
+            Then, you will go through a guided meditation to charge your sigil with intent and focus.
+        </p>
+        <p>
+            Once your sigil is charged, it will remain on your screen as a constant reminder of your goal. 
+            This process aims to keep you focused and motivated, helping you achieve your objectives.
+        </p>
+        <button onclick="showGoalInput()">Create Your Sigil</button>
+    </div>
+
+    <div id="goal-input" style="display: none;">
+        <h2>Enter Your Goal</h2>
+        <input type="text" id="goal" placeholder="Enter your goal here...">
+        <button onclick="generateSigil()">Generate Sigil</button>
+    </div>
+
+    <div id="sigil-display" style="display: none;">
+        <h2>Your Sigil</h2>
+        <div id="sigil"></div>
+        <button onclick="startMeditation()">Begin Meditation</button>
+    </div>
+
+    <div id="meditation-zone" style="display: none;">
+        <h2>Meditation</h2>
+        <div id="meditation-bg"></div>
+        <div id="sigil-large"></div>
+        <div id="breathing-text">Breathe in... Breathe out...</div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
